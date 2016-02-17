@@ -1,0 +1,75 @@
+<h4>{{ _('Raspberry Pi Triggers') }}</h4>
+Specify python code for Raspberry Pi GPIO trigger.<br />
+<b>Example:</b> <br /><br />
+# set up GPIO for Board<br />
+GPIO.setmode(GPIO.BOARD)<br />
+<br />
+# set gpio 12 out<br />
+GPIO.setup(12, GPIO.OUT)<br />
+<br />
+# set gpio 12 to high<br />
+GPIO.output(12, GPIO.HIGH)<br />
+<br />
+See RPIO documentation and examples in <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/">Raspberry Pi GPIO Python</a>.<br />
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job starts') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onstart" id="rpigpio_onstart"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job complete') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.oncomplete" id="rpigpio_oncomplete"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job cancel') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.oncancel" id="rpigpio_oncancel"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job fail') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onfail" id="rpigpio_onfail"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On printer error') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onerror" id="rpigpio_onerror"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job pause') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onpause" id="rpigpio_onpause"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On print job resume') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onresume" id="rpigpio_onresume"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On printer connection') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onconnection" id="rpigpio_onconnection"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On printer disconnection') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.ondisconnection" id="rpigpio_ondisconnection"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('On upload file') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.rpigpio.onupload" id="rpigpio_onupload"></textarea>
+        </div>
+    </div>
+</form>
